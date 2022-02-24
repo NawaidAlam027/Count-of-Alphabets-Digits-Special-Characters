@@ -1,0 +1,39 @@
+using System;
+
+namespace Checking
+{
+    class Checking_Count
+
+    {
+        static void Main(string[] args)
+        {
+            int alphabets, digits, sp_chars;
+            string str;
+            int i = 0;
+            alphabets = digits = sp_chars = 0;
+            Console.Write("Enter a String:  ");
+            str = Console.ReadLine();
+            while(i<str.Length)
+            {
+                if ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z'))
+                {
+                    alphabets++;
+                }
+                else if(str[i]>='0'&&str[i]<='9')
+                {
+                    digits++;
+                }
+                else
+                {
+                    sp_chars++;
+                }
+                i++;
+            }
+            Console.WriteLine("Number of Alphabets={0}", alphabets);
+            Console.WriteLine("Number of Digits={0}", digits);
+            Console.WriteLine("Number of Special Characters={0}", sp_chars);
+            Console.ReadLine();
+            
+        }
+    }
+}
